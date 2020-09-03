@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{cite}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+            
+        \Huge
+        \textbf{Taller memoria}
+            
+        \vspace{0.5cm}
+        \LARGE
+        Informática 2
+            
+        \vspace{1.5cm}
+            
+        \textbf{Julián Mauricio Sánchez Ceballos}
+            
+        \vfill
+            
+        \vspace{0.8cm}
+            
+        \Large
+        Departamento de Ingeniería Electrónica y Telecomunicaciones\\
+        Universidad de Antioquia\\
+        Medellín\\
+        Septiembre de 2020
+            
+    \end{center}
+\end{titlepage}
+
+
+
+\section{Taller} \label{taller}
+
+    \subsection{Defina que es la memoria del computador}
+    La memoria es un componente en las computadoras que tiene como función conectar la unidad central de procesamiento y los elementos de entrada y salida, allí  la información de aplicaciones, instrucciones y datos es almacenada de manera temporal, a estos datos se les puede efectuar operaciones de lectura y escritura, para luego ser almacenados en el disco duro de nuevo. 
+    
+    \subsection{Mencione los tipos de memoria que conoce y haga una pequeña descripción de cada tipo}
+    En una computadora hay varios tipos de memoria como: 
+    
+        \subsubsection{Memoria RAM}
+        O Random Access Memory por sus siglas en inglés, es el tipo de memoria más importante del computador y la más usada. Se compone de chips de memoria que a si vez se componen de transistores y capacitores. Esta memoria se divide en celdas en donde se almacenan temporalmente los bits de información, esta memoria puede tener dos presentaciones una RAM dinámica que está compuesta de capacitores que se vacían rápidamente de electrones que representan el 1 en el lenguaje binario por lo que es debido recargar constantemente estas celdas y la RAM estática que es está compuesta principalmente por cuatro o seis transistores en cada celda, logrando así que no sea necesario estar refrescando o recargando constantemente las celdas que representen un 1.
+        
+        \subsubsection{Memoria cache}
+        Una memoria mucho más rápida que la memoria RAM, se divide en tres niveles L1, L2 y L3, y es allí donde se lleva la información más usada en el computador. Se encuentra en núcleo del computador y su principal problema es el costo de producción, al ser tan alto es poco viable incorporarlas en grandes cantidades en los computadores hogareños.   
+        
+        \subsubsection{Memoria virtual}
+        Se trata de una porción de disco duro donde se almacena aplicaciones en ejecución y que no ocupan tanto espacio, estas aplicaciones están listas para ser usadas en cualquier momento sin ocupar espacios innecesarios en la memoria RAM.  
+        
+        \subsubsection{memoria disco duro}
+        La Memoria de Disco duro o memoria no volátil se encarga de guardar los datos que la memoria RAM elimina una vez se dejaron de usar, la capacidad de lectura  escritura es muchísima más pequeña que la capacidad que tiene la memoria RAM
+        
+        
+    
+    
+    \subsection{Describa la manera como se gestiona la memoria en un computador}
+    1-Al iniciar el sistema operativo, los procesos de ejecución del sistema se almacenan en el sistema \newline
+    2-Todos los programas se van a la memoria \newline
+    3-Se comienza un ciclo de abrir un programa y esté almacena sus datos en la memoria \newline
+    4-Cuando la memoria llena su capacidad de frecuencia, empieza a liberar datos o aplicaciones para disminuir espacio \newline
+    5-Vuelve a iniciar el ciclo de almacenamiento y  liberar las secciones de memoria que ya no se utilizan para que estén disponibles para otros programas. \newline
+    6-Cuando se apaga el equipo, se borra toda la información de la memoria. \newline
+    
+    \subsection{¿Qué hace que una memoria sea más rápida que otra? ¿Por qué esto es importante?}
+
+
+
+\section{Conclusión} \label{conclulsion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
