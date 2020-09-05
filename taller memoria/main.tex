@@ -1,4 +1,4 @@
-\documentclass{article}
+documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{listings}
@@ -35,19 +35,23 @@
             
     \end{center}
 \end{titlepage}
+\tableofcontents
 
+\newpage
+\section{Introducción}
+Dentro del ámbito de la computación se encuentran elementos que debido a su importancia y su categórico papel se deben estudiar de manera profunda para el correcto conocimiento de la computación, la memoria del computador cumple con los requisitos de ser un elemento que debido a su importancia, se hace elemental el conocer su funcionamiento, en gran parte, para sacar el mayor provecho a este recurso. Definida por primera vez (y aceptado hasta hoy en día) por el matemático John Von Neumann en su libro "Primer esbozo de un informe sobre el EDVAC"(First draft of a report on the EDVAC, 1945) aquí se define también la Arquitectura Von Neumann en donde ésta hace de intermedio entre el procesador que ejecuta datos sobre los elementos en la memoria y los periféricos de entrada y salida que son los encargados de recoger y mostrar los cambios hechos a los datos de la memoria respectivamente, a través del tiempo y el avance de la tecnología los computadores se han convertido en maquinas mucho mas sofisticado y se ha logrado perfeccionar muchos ámbitos, sin embargo, hasta la actualidad el funcionamiento básico de un computador se puede explicar mediante la arquitectura de Von Neumman. Es por lo que el propósito de este documento es el estudio a fondo de la memoria, su funcionamientos, los tipos de memoria, las características, ventajas, capacidad y velocidad, con esto el entendimiento de la memoria darán una visión mas general sobre las ventajas de saber aprovechar este elemento en la computación, siendo de gran ayuda el entender esto para la tarea de crear algoritmos eficientes y saque provecho de la memoria. 
 
-
-\section{Taller} \label{taller}
+\newpage
+\section{Taller}
 
     \subsection{Defina que es la memoria del computador}
-    La memoria es un componente en las computadoras que tiene como funcion conectar la unidad central de procesamiento y los elementos de entrada y salida, allí  la información de aplicaciones, instrucciones y datos es almacenada de manera temporal, a estos datos se les puede efectuar operaciones de lectura y escritura, para luego ser almacenados en el disco duro de nuevo. 
+    La memoria es un componente en las computadoras que tiene como función conectar la unidad central de procesamiento y los elementos de entrada y salida, allí  la información de aplicaciones, instrucciones y datos es almacenada de manera temporal, a estos datos se les puede efectuar operaciones de lectura y escritura, para luego ser almacenados en el disco duro de nuevo, como existen tipos de memorias donde los datos se eliminan una vez se dejan de usar(volátiles) también están las memorias que guardan la información y los datos incluso después de apagarse el computador(no volátiles) la funcionalidad de ambas recurren al mismo propósito de almacenar información, lectura y escritura de datos, aunque su velocidad en estas dos ultimas funcionalidades puede variar según el tipo de memoria de la que se trate. 
     
     \subsection{mencione los tipos de memoria que conoce y haga una pequeña descripción de cada tipo}
-    En una computadora hay varios tipos de memoría como: 
+    En una computadora hay varios tipos de memoria como: 
     
         \subsubsection{Memoria Ram}
-        O Random Access Memory por sus siglas en ingles, es el tipo de memoria mas importante del computador y la mas usada. se compone de chips de memoria que a si vez se componen de transistores y capacitores. Esta memoria se divide en celdas en donde se almacenan temporalmente los bits de información, esta memoria puede tener dos presentaciones una RAM dinamica que esta compuesta de capacitores que se vacian rapidamente de electrones que representan el 1 en el lenguaje binario por lo que es dedibo recargar constantemente estas celdas y la Ram estática que es está compuesta princepalmente por cuatro o seis transistores en cada celda, logrando asi que no sea necesario estar refrescando o recargando constantemente las celdas que representen un 1.
+        O Random Access Memory por sus siglas en ingles, es el tipo de memoria mas importante del computador y la mas usada. se compone de chips de memoria que a si vez se componen de transistores y capacitores. Esta memoria se divide en celdas en donde se almacenan temporalmente los bits de información, esta memoria puede tener dos presentaciones una RAM dinámica que esta compuesta de capacitores que se vacían rápidamente de electrones que representan el 1 en el lenguaje binario por lo que es dedibo recargar constantemente estas celdas y la RAM estática que es está compuesta principalmente por cuatro o seis transistores en cada celda, logrando así que no sea necesario estar refrescando o recargando constantemente las celdas que representen un 1.
         
         \begin{figure}[h]
         \includegraphics[width=4cm]{ram.jpg}
@@ -58,13 +62,13 @@
         
         
         \subsubsection{Memoria cache}
-        Una memoria mucho mas rapida que la memoria RAM, se divide en tres niveles L1, L2 y L3, y es allí donde se lleva la información mas usada en el computador. Se encuentra en nucleo del computador y su principal problema es el costo de producción, al ser tan alto es poco viable incomporarlas en grandes cantidades en los computadores hogareños.   
+        Una memoria mucho mas rápida que la memoria RAM, se divide en tres niveles L1, L2 y L3, escritas desde el nivel con mas potencia hasta el menos potente y desde el mas pequeño al mas grande en almacenamiento respectivamente.Es allí donde se lleva la información mas usada en el computador. Se encuentra en núcleo del computador y su principal problema es el costo de producción, al ser tan alto es poco viable incorporarlas en grandes cantidades en los computadores hogareños, sin embargo es la memoria mas rápida que se puede incorporar en un computador.   
         
         \subsubsection{Memoria virtual}
-        se trata de una porción de disco duro donde se almacena aplicaciones en ejecutación y que no ocupan tanto espacio, estas aplicaciones estan listas para ser usadas en cualquier comemnto sin ocupar espacios innecesarios en la memoria RAM.  
+        se trata de una porción de disco duro donde se almacena aplicaciones en ejecución y que no ocupan tanto espacio, estas aplicaciones están listas para ser usadas en cualquier momento sin ocupar espacios innecesarios en la memoria RAM, de esta manera se permite un uso más eficiente de la memoria RAM facilitando que se hagan procesos múltiples y ejecutar aplicaciones de manera simultanea 
         
         \subsubsection{memoria disco duro}
-        la Memoria de Disco duro o memoria no volatil se encarga de guardar los datos que la memoria RAM elimina una vez se dejaron de usar, la capacidad de lectura  escritura es muchisima mas pequeña que la capacidad que tiene la memoria RAM
+        la Memoria de Disco duro o memoria no volátil se encarga de guardar los datos que la memoria RAM elimina una vez se dejaron de usar, la capacidad de lectura  escritura es muchísima mas pequeña que la capacidad que tiene la memoria RAM, sin embargo la principal utilidad de esta memoria radica en su característica de no volátil permitiendo almacenar los datos y cambios que se hagan a los datos aun luego de apagar el computador, es importante decir que es desde aquí donde el bus de información toma los datos para ser llevados a la memoria RAM donde se ejecutan cambios sobre los datos originales. 
         
         \begin{figure}[h]
         \includegraphics[width=4cm]{discoDuro.jpg}
@@ -75,7 +79,7 @@
         
         
         \subsubsection{Memorias Flash}
-        Son memorias hechas a partir de del uso de semiconductores no volatiles y re-escribibles, utiles que permite la lectura y escritura de multiples posiciones de memoria en la misma operación, esto otorga una gran velocidad de funcionamiento sobre las memorias tipo ROM. Una de sus ventajas más importantes es el bajo costo y su aumento de capacidad, ademas de su bajo consumo de energia y su portabilidad 
+        Son memorias hechas a partir de del uso de semiconductores no volátiles y re-escribibles, útiles que permite la lectura y escritura de múltiples posiciones de memoria en la misma operación, esto otorga una gran velocidad de funcionamiento sobre las memorias tipo ROM. Una de sus ventajas más importantes es el bajo costo y su aumento de capacidad, además de su bajo consumo de energía y su portabilidad 
         
         \begin{figure}[h]
         \includegraphics[width=4cm]{flash.jpg}
@@ -92,15 +96,19 @@
     
     
     \subsection{¿Qué hace que una memoria sea más rápida que otra? ¿Por qué esto es importante?}
-    La capacidad de almacenamiento sin duda alguna es un aspecto del cual se puede partir para comparar dos memorias, por ejemplo una memoria de 4 GB será más lenta que una memoria de 8 GB, también hay que tener en cuenta los ciclos, dos memorias de 4 GB van a ser diferentes si una trabaja a 3GHz y otra a 6Ghz por lo que estos dos aspectos principalmente hacen que una memoria sea más rápida que otra. Esto es importante porque una memoria más rápida permite hacer tareas mucho más exigentes de maneras mucho más eficientes. 
+    La capacidad de almacenamiento sin duda alguna es un aspecto del cual se puede partir para comparar dos memorias, por ejemplo una memoria de 4 GB será más lenta que una memoria de 8 GB, también hay que tener en cuenta los ciclos, dos memorias de 4 GB van a ser diferentes si una trabaja a 3GHz y otra a 6GHz por lo que estos dos aspectos principalmente hacen que una memoria sea más rápida que otra. Una memoria es una parte fundamental dentro del funcionamiento de un computador, un computador con una memoria de buena calidad y más rápida podrá hacer trabajos de manera mas eficientes, teniendo en cuenta la gran velocidad con la que la tecnología avanza y que cada vez los programas son mas exigentes, se manejan mucho mas datos, el tener una memoria rápida y con buena capacidad de almacenamiento se convierte en uno de los aspectos mas importantes de la computación. 
 
 
 \section{Conclusión} \label{conclulsion}
-Con ésta información se concluye en la idea de resaltar la importancia de la memoria en un computador su función, sus capacidades y datos, importantes para el ámbito de la computación especialmente para el desarrollo de buenos programas que utilicen de la manera más eficiente posible la memoria de cada dispositivo, también se resalta la importancia de la memoria RAM como elemento principal en el momento de la lectura y escritura de datos y las diferentes memorias con sus respectivas capacidades que ayudan al manejo y modificación de los datos. 
+Desde la concepción de la arquitectura Von Neumann hasta nuestros días la memoria de un computador ha jugado un papel importante, convirtiéndose en un componente de suma importancia.  
 
-
+\newpage
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 \cite{rebollo}
 \cite{Beekman}
+\cite{barcelo}
+\cite{Mano}
 \end{document}
+
+
