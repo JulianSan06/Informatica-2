@@ -40,11 +40,11 @@
 
 \newpage
 \section{Introducción}
-Dentro del ámbito de la computación se encuentran elementos que debido a su importancia y su categórico papel se deben estudiar de manera profunda para el correcto conocimiento de la computación, la memoria del computador cumple con los requisitos de ser un elemento que debido a su importancia, se hace elemental el conocer su funcionamiento, en gran parte, para sacar el mayor provecho a este recurso. Definida por primera vez (y aceptado hasta hoy en día) por el matemático John Von Neumann en su libro "Primer esbozo de un informe sobre el EDVAC"(First draft of a report on the EDVAC, 1945) aquí se define también la Arquitectura Von Neumann en donde ésta hace de intermedio entre el procesador que ejecuta datos sobre los elementos en la memoria y los periféricos de entrada y salida que son los encargados de recoger y mostrar los cambios hechos a los datos de la memoria respectivamente, a través del tiempo y el avance de la tecnología los computadores se han convertido en maquinas mucho mas sofisticado y se ha logrado perfeccionar muchos ámbitos, sin embargo, hasta la actualidad el funcionamiento básico de un computador se puede explicar mediante la arquitectura de Von Neumman\cite{barcelo}.\newline
+Dentro del ámbito de la computación se encuentran elementos que debido a su importancia y su categórico papel se deben estudiar de manera profunda para el correcto conocimiento de la computación, la memoria del computador cumple con los requisitos de ser un elemento que debido a su importancia, se hace elemental el conocer su funcionamiento, en gran parte, para sacar el mayor provecho a este recurso. Para esto es necesario devolverse al siglo pasado y como dice Barceló: "Aunque los ordenadores han ido incorporando muchos perfeccionamientos técnicos, el principio que rige su funcionamiento se estableció hace ya más de cincuenta años. por el matemático John Von Neumann en su libro 'Primer esbozo de un informe sobre el EDVAC'(First draft of a report on the EDVAC, 1945)"\cite{barcelo}. Pues es en la Arquitectura Von Neumann en donde se define la funcionalidad de la memoria y su relación con el procesador que es el encargado de ejecutar cambios sobre los datos almacenados en la memoria y los periféricos de entrada y salida que son los encargados de recoger y mostrar los cambios hechos a los datos de la memoria respectivamente.\newline
 
 
 Es por lo que el propósito de este documento es el estudio a fondo de la memoria, su funcionamientos, los tipos de memoria, las características, ventajas, capacidad y velocidad, con esto el entendimiento de la memoria darán una visión mas general sobre las ventajas de saber aprovechar este elemento en la computación, siendo de gran ayuda el entender esto para la tarea de crear algoritmos eficientes y saque provecho de la memoria. 
-
+\newline
 
 En el siguiente taller se resuelven cuestiones acerca de la memoria en base a una lectura previa del documento brindado por el profesor Augusto Enrique Salazar Ramirez Jimenez en su texto ''Como funciona la memoria de un computador''
 \newpage
@@ -88,7 +88,9 @@ En el siguiente taller se resuelven cuestiones acerca de la memoria en base a un
         
         
         \subsubsection{Memoria virtual}
-        Se trata de una porción de disco duro donde se almacena aplicaciones en ejecución y que no ocupan tanto espacio, estas aplicaciones están listas para ser usadas en cualquier momento sin ocupar espacios innecesarios en la memoria RAM, de esta manera se permite un uso más eficiente de la memoria RAM facilitando que se hagan procesos múltiples y ejecutar aplicaciones de manera simultanea 
+        Se trata de una porción de disco duro donde se almacena aplicaciones en ejecución y que no ocupan tanto espacio, estas aplicaciones están listas para ser usadas en cualquier momento sin ocupar espacios innecesarios en la memoria RAM, de esta manera se permite un uso más eficiente de la memoria RAM facilitando que se hagan procesos múltiples y ejecutar aplicaciones de manera simultanea.
+        
+        Entre algunas capacidades de esta memoria están;ejecutar programas sin necesidad de memoria física, simulación de RAM y extensión de su tamaño por medio del disco duro.\cite{gestion}  
         
         \subsubsection{memoria disco duro}
         la Memoria de Disco duro o memoria no volátil se encarga de guardar los datos que la memoria RAM elimina una vez se dejaron de usar, la capacidad de lectura  escritura es muchísima mas pequeña que la capacidad que tiene la memoria RAM, sin embargo la principal utilidad de esta memoria radica en su característica de no volátil permitiendo almacenar los datos y cambios que se hagan a los datos aun luego de apagar el computador, es importante decir que es desde aquí donde el bus de información toma los datos para ser llevados a la memoria RAM donde se ejecutan cambios sobre los datos originales. 
@@ -115,13 +117,15 @@ En el siguiente taller se resuelven cuestiones acerca de la memoria en base a un
         La figura \ref{fig:flash} muestra las distintas formas de una memoria flash
     
     \subsection{describa la manera como se gestiona la memoria en un computador}
-    La gestión de la memoria se hace a través de microprocesadores que saca la información o los datos y los lleva del disco duro a la memoria donde se  leen y se modifica a gusto del usuario, luego de terminar el proceso con los datos estos mismos microprocesadores llevan la información modificada a el disco duro mediante el bus de datos, en el disco duro los microprocesadores sobrescriben el mismo archivo, con esto se reemplaza por el archivo viejo por el nuevo. 
-    El archivo es eliminado de la memoria RAM para evitar que ocupe espacio innecesario, con esto se puede asignar espacio a la memoria a otros procesos que necesiten, que igualmente lo liberaran cuando ya no lo requieran, de esta gestión se encarga el sistema operativo, ciertamente lo hace el administrados de memoria y su labor consiste en llevar el registro de las aplicaciones que necesitan memoria, la cantidad que necesitan y cuando ya no necesitan memoria.
+    La gestión de la memoria se hace a través de microprocesadores que saca la información o los datos y los lleva del disco duro a la memoria donde se  leen y se modifica a gusto del usuario, mediante operaciones lógicas que suceden dentro del procesador que es donde los cambios se generan, luego de terminar el proceso con los datos estos mismos microprocesadores llevan la información modificada a el disco duro mediante el bus de datos, en el disco duro los microprocesadores sobrescriben el mismo archivo, con esto se reemplaza por el archivo viejo por el nuevo, donde están los cambios que el usuario realizó. 
+    El archivo es eliminado de la memoria RAM para evitar que ocupe espacio innecesario, con esto se puede asignar espacio a la memoria a otros procesos que necesiten, que igualmente lo liberaran cuando ya no lo requieran, de esta gestión se encarga el sistema operativo, ciertamente lo hace el administrados de memoria y su labor consiste en llevar el registro de las aplicaciones que necesitan memoria, la cantidad que necesitan y cuando ya no necesitan memoria.\cite{gestion}
  
     
     
-    \subsection{¿Qué hace que una memoria sea más rápida que otra? ¿Por qué esto es importante?}
-    La capacidad de almacenamiento sin duda alguna es un aspecto del cual se puede partir para comparar dos memorias, por ejemplo una memoria de 4 GB será más lenta que una memoria de 8 GB, también hay que tener en cuenta los ciclos, dos memorias de 4 GB van a ser diferentes si una trabaja a 3GHz y otra a 6GHz por lo que estos dos aspectos principalmente hacen que una memoria sea más rápida que otra. Una memoria es una parte fundamental dentro del funcionamiento de un computador, un computador con una memoria de buena calidad y más rápida podrá hacer trabajos de manera mas eficientes, teniendo en cuenta la gran velocidad con la que la tecnología avanza y que cada vez los programas son mas exigentes, se manejan mucho mas datos, el tener una memoria rápida y con buena capacidad de almacenamiento se convierte en uno de los aspectos mas importantes de la computación. 
+    \subsection{¿Qué hace que una memoria sea más rápida que otra? ¿Por qué eso es importante?}
+    la memoria del sistema tiene mas rapidez si la CPU tiene que esperar menos para acceder a los datos, o sea, la cantidad de latencia que tenga una memoria, este es el tiempo que transcurre entre la petición de la CPU y la respuesta de la memoria para enviar o recibir los datos que requiere la CPU. 
+    
+    Esta cuestión es importante debido a la importancia de la memoria dentro del funcionamiento de un computador, un computador con una memoria de buena calidad y más rápida podrá hacer trabajos mas exigentes y de maneras más rápidas, teniendo en cuenta la gran velocidad con la que la tecnología avanza y que cada vez los programas son mas exigentes, se manejan mucho mas datos, el tener una memoria rápida y con buena capacidad de almacenamiento se convierte en un tema de competitividad entre marcas, o empresas de programación que estén bien dotadas y proporcionalmente mas aptas a superar nuevos y mas exigentes retos que surgen en el mundo de la informática. 
 
 
 \section{Conclusión} \label{conclulsion}
@@ -130,4 +134,5 @@ Desde la concepción de la arquitectura Von Neumann hasta nuestros días la memo
 \bibliography{references}
 
 \end{document}
+
 
