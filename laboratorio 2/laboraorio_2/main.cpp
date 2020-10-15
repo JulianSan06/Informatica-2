@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-
+//prueba git
 
 using namespace std;
 int pot(int exponente);
